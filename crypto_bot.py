@@ -35,7 +35,7 @@ def supertrend_bot(bar):
         position = check_positions(symbol=symbol)
         should_buy = bar['c'] > dataframe["SUPERT_7_3.0"][-1]
         should_sell = bar['c'] < dataframe["SUPERT_7_3.0"][-1]
-        print(f"Price: {dataframe.close[-1]}")
+        print(f"Price: {bar['c']}")
         print("Super Trend Indicator: {}".format(dataframe["SUPERT_7_3.0"][-1]))
         print(f"Position: {position} | Should Buy: {should_buy}")
 
